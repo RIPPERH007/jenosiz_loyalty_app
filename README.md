@@ -4,7 +4,7 @@ A Flutter mobile application prototype for an AI-powered loyalty platform design
 
 ## 🎬 Demo
 
-<img src="https://www.dropbox.com/scl/fi/fnfb1lj7ujboyzumkvasm/Screen-Recording-2568-08-07-at-13.02.51.gif?rlkey=pxodhaw8u8nkrrvepr4w0bax5&st=7usnn21j&raw=1" alt="Jenosize Loyalty App Demo" width="300">
+![Jenosize Loyalty App Demo](https://www.dropbox.com/scl/fi/fnfb1lj7ujboyzumkvasm/Screen-Recording-2568-08-07-at-13.02.51.gif?rlkey=pxodhaw8u8nkrrvepr4w0bax5&st=9hwwrsfk&raw=1)
 
 
 
