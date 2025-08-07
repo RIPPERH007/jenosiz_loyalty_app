@@ -21,4 +21,3 @@ class AddTransaction extends PointsEvent {
 
 class RefreshPoints extends PointsEvent {}
 
-// presentation/bloc/points/points_state.dart

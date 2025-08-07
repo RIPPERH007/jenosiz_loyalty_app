@@ -1,4 +1,3 @@
-// data/models/campaign_model.dart
 import 'package:equatable/equatable.dart';
 
 class CampaignModel extends Equatable {

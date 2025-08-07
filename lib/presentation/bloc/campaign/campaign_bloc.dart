@@ -1,4 +1,3 @@
-// presentation/bloc/campaign/campaign_bloc.dart - แก้ไขเพื่อไม่แสดงหน้า loading
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/repositories/campaign_repository.dart';
 import '../../../data/models/transaction_model.dart';
@@ -42,7 +41,6 @@ class CampaignBloc extends Bloc<CampaignEvent, CampaignState> {
     if (state is CampaignLoaded) {
       final currentState = state as CampaignLoaded;
 
-      // ⭐ เปลี่ยนจาก CampaignJoining เป็น CampaignLoaded พร้อม joining flag
       emit(CampaignLoaded(
         campaigns: currentState.campaigns,
         joiningCampaignId: event.campaignId, // เพิ่ม parameter นี้
@@ -71,7 +69,6 @@ class CampaignBloc extends Bloc<CampaignEvent, CampaignState> {
 
           await pointsRepository.addTransaction(transaction);
 
-          // ⭐ emit CampaignLoaded พร้อม joined flag
           emit(CampaignLoaded(
             campaigns: currentState.campaigns,
             joinedCampaignId: event.campaignId, // เพิ่ม parameter นี้
@@ -92,7 +89,6 @@ class CampaignBloc extends Bloc<CampaignEvent, CampaignState> {
       RefreshCampaigns event,
       Emitter<CampaignState> emit,
       ) async {
-    // ⭐ เฉพาะ refresh เท่านั้นที่ใช้ loading
     emit(CampaignLoading());
     try {
       final campaigns = await campaignRepository.getCampaigns();

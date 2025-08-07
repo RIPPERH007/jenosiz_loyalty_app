@@ -26,7 +26,6 @@ class CampaignRepository {
 
   Future<bool> joinCampaign(String campaignId, String userId) async {
     try {
-      // Simulate API call
       await Future.delayed(const Duration(milliseconds: 1000));
       return true;
     } catch (e) {

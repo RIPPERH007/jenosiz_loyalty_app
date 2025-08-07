@@ -59,7 +59,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             );
           }  else if (state is CampaignLoaded) {
-            // ⭐ แสดง refresh success เฉพาะเมื่อเป็นการ refresh จริงๆ
             if (_isRefreshing) {
               ScaffoldMessenger.of(context).hideCurrentSnackBar();
               ScaffoldMessenger.of(context).showSnackBar(
@@ -201,10 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-
-                // ⭐ Content Section - ไม่มี loading screen สำหรับ join campaign
                 if (state is CampaignLoading)
-                // เฉพาะตอน initial load หรือ refresh เท่านั้น
                   SliverFillRemaining(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -240,7 +236,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   )
                 else if (state is CampaignLoaded)
-                // ⭐ แสดง campaigns ไม่ว่า state จะเป็น joining หรือ joined
                   SliverPadding(
                     padding: const EdgeInsets.all(8),
                     sliver: SliverList(

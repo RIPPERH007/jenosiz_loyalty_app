@@ -1,4 +1,3 @@
-// presentation/bloc/membership/membership_bloc.dart - Fixed Constructor
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/repositories/point_repository.dart';
 import '../../../data/repositories/user_repository.dart';
@@ -12,10 +11,9 @@ class MembershipBloc extends Bloc<MembershipEvent, MembershipState> {
   final PointsRepository pointsRepository;
   final _uuid = const Uuid();
 
-  // ⭐ Constructor ต้องรับ pointsRepository ด้วย
   MembershipBloc({
     required this.userRepository,
-    required this.pointsRepository,  // ⭐ เพิ่ม required parameter นี้
+    required this.pointsRepository,
   }) : super(MembershipInitial()) {
     on<CheckMembershipStatus>(_onCheckMembershipStatus);
     on<JoinMembership>(_onJoinMembership);
@@ -60,7 +58,6 @@ class MembershipBloc extends Bloc<MembershipEvent, MembershipState> {
         if (success) {
           print('📝 Creating membership bonus transaction...'); // Debug log
 
-          // Add membership bonus transaction
           final transaction = TransactionModel(
             id: _uuid.v4(),
             type: TransactionType.membership,

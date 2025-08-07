@@ -14,7 +14,6 @@ class PointsRepository {
       final transactionsJson = SharedPreferencesHelper.getTransactions();
 
       if (transactionsJson.isEmpty) {
-        // Initialize with sample data if empty
         final sampleTransactions = await MockData.getTransactions();
         await saveTransactions(sampleTransactions);
         return sampleTransactions;
@@ -49,7 +48,6 @@ class PointsRepository {
         .map((transaction) => jsonEncode(transaction.toJson()))
         .toList();
 
-    // Clear existing and save new
     await SharedPreferencesHelper.instance.remove(SharedPreferencesHelper.keyTransactions);
     await SharedPreferencesHelper.instance.setStringList(
       SharedPreferencesHelper.keyTransactions,

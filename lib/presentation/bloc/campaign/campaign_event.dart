@@ -1,4 +1,3 @@
-// presentation/bloc/campaign/campaign_event.dart
 import 'package:equatable/equatable.dart';
 
 abstract class CampaignEvent extends Equatable {

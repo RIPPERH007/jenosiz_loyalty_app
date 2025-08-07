@@ -1,4 +1,3 @@
-// presentation/screens/home/widgets/campaign_card.dart - ใช้ flags แทน states
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -23,7 +22,6 @@ class CampaignCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CampaignBloc, CampaignState>(
       builder: (context, state) {
-        // ⭐ ใช้ flags ใน CampaignLoaded แทน
         bool isJoining = false;
         bool isJoined = false;
 
@@ -206,7 +204,6 @@ class CampaignCard extends StatelessWidget {
         ),
       );
     } else {
-      // Default state
       return ElevatedButton.icon(
         onPressed: () {
           HapticFeedback.lightImpact();

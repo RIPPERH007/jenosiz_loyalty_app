@@ -1,4 +1,3 @@
-
 import '../../core/utils/shared_preferences_helper.dart';
 import '../datasources/mock_data.dart';
 import '../models/user_model.dart';
@@ -8,7 +7,6 @@ class UserRepository {
     try {
       final user = await MockData.getUser();
 
-      // Update with local data
       return user.copyWith(
         isMember: SharedPreferencesHelper.isMember,
         membershipDate: SharedPreferencesHelper.membershipDate,
@@ -24,10 +22,7 @@ class UserRepository {
 
   Future<bool> joinMembership(String userId) async {
     try {
-      // Simulate API call
       await Future.delayed(const Duration(milliseconds: 1200));
-
-      // Update local storage
       await SharedPreferencesHelper.setMembershipStatus(true);
       await SharedPreferencesHelper.setUserPoints(
         SharedPreferencesHelper.userPoints + 100,
