@@ -4,6 +4,9 @@ A Flutter mobile application prototype for an AI-powered loyalty platform design
 
 ## 🎯 Features
 
+![Jenosize Loyalty App Demo](https://www.dropbox.com/scl/fi/fnfb1lj7ujboyzumkvasm/Screen-Recording-2568-08-07-at-13.02.51.gif?rlkey=pxodhaw8u8nkrrvepr4w0bax5&st=7usnn21j&raw=1)
+
+
 ### Core Functionality
 - **Campaign List** - Browse and join 6 loyalty campaigns
 - **Membership System** - Join membership with 100 points welcome bonus
@@ -101,15 +104,3 @@ Built with ❤️ for Jenosize Digital Opportunity Creator
 
 **Tech Stack**: Flutter • Dart • BLoC • Material Design 3
 
-
-
-Join Jenosize Loyalty and use my referral code: JENOUVWX
-
-Download the app and start earning rewards today!
-https://play.google.com/store/apps/jenosize-loyalty
-
-
-Join Jenosize Loyalty and use my referral code: JENOUVWX
-
-Download the app and start earning rewards today!
-https://play.google.com/store/apps/jenosize-loyalty
