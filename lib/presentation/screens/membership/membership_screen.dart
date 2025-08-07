@@ -129,9 +129,9 @@ class MembershipScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 12),
-                          Text(
+                          const Text(
                             AppStrings.membershipSuccess,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
